@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    container_name: testapp
+    restart: always
+    build: .
+    ports:
+      - '5000:5000'
+    links:
+      - db
+    volumes:
+      - .:/usr/src/app
+  db:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - '27017:27017'
