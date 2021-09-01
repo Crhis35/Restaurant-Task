@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./src/server.js"
+    "start": "node ./src/server.js",
+    "server": "nodemon ./src/server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -20,5 +23,9 @@
     "morgan": "^1.10.0",
     "validator": "^13.6.0",
     "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
   }
 }

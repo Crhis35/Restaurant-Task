@@ -12,12 +12,16 @@ dotenv.config({ path: './config.env' });
 const app = require('./app');
 
 mongoose
-  .connect('mongodb://db/database', {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
+  // .connect('mongodb://db/database', {
+  .connect(
+    'mongodb+srv://Crhistian:_-5vWdW2MQpZzVB@cluster0.bbhy4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log('DB CONECTION SUCCESFULL');
   });
