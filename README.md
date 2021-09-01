@@ -8,14 +8,14 @@ Before start you should have some configurations setups.
 
 ```sh
 npm install 
-npm start
+npm run dev
 ```
 
 Or
 
 ```sh
 yarn install
-yarn start
+yarn dev
 ```
 
 Or
